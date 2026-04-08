@@ -1,0 +1,816 @@
+2026-04-08 19:06:24,492:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2026-04-08 19:06:24,494:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2026-04-08 19:06:24,494:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2026-04-08 19:06:24,494:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2026-04-08 19:06:31,191:INFO:PyCaret ClassificationExperiment
+2026-04-08 19:06:31,191:INFO:Logging name: clf-default-name
+2026-04-08 19:06:31,195:INFO:ML Usecase: MLUsecase.CLASSIFICATION
+2026-04-08 19:06:31,195:INFO:version 3.3.2
+2026-04-08 19:06:31,195:INFO:Initializing setup()
+2026-04-08 19:06:31,195:INFO:self.USI: 97a4
+2026-04-08 19:06:31,195:INFO:self._variable_keys: {'X_train', 'memory', 'pipeline', '_ml_usecase', 'X', 'X_test', 'y_train', 'n_jobs_param', 'y', 'is_multiclass', 'log_plots_param', 'fold_generator', 'exp_id', 'html_param', '_available_plots', 'target_param', 'exp_name_log', 'fix_imbalance', 'logging_param', 'data', 'idx', 'fold_groups_param', 'gpu_n_jobs_param', 'fold_shuffle_param', 'gpu_param', 'y_test', 'seed', 'USI'}
+2026-04-08 19:06:31,195:INFO:Checking environment
+2026-04-08 19:06:31,195:INFO:python_version: 3.11.4
+2026-04-08 19:06:31,195:INFO:python_build: ('tags/v3.11.4:d2340ef', 'Jun  7 2023 05:45:37')
+2026-04-08 19:06:31,195:INFO:machine: AMD64
+2026-04-08 19:06:31,195:INFO:platform: Windows-10-10.0.26200-SP0
+2026-04-08 19:06:31,198:INFO:Memory: svmem(total=16859041792, available=2665512960, percent=84.2, used=14193528832, free=2665512960)
+2026-04-08 19:06:31,198:INFO:Physical Core: 10
+2026-04-08 19:06:31,198:INFO:Logical Core: 12
+2026-04-08 19:06:31,198:INFO:Checking libraries
+2026-04-08 19:06:31,198:INFO:System:
+2026-04-08 19:06:31,198:INFO:    python: 3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)]
+2026-04-08 19:06:31,198:INFO:executable: c:\Users\barun\AppData\Local\Programs\Python\Python311\python.exe
+2026-04-08 19:06:31,198:INFO:   machine: Windows-10-10.0.26200-SP0
+2026-04-08 19:06:31,198:INFO:PyCaret required dependencies:
+2026-04-08 19:06:31,225:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\_distutils_hack\__init__.py:33: UserWarning: Setuptools is replacing distutils.
+  warnings.warn("Setuptools is replacing distutils.")
+
+2026-04-08 19:06:31,843:INFO:                 pip: 25.3
+2026-04-08 19:06:31,844:INFO:          setuptools: 65.5.0
+2026-04-08 19:06:31,844:INFO:             pycaret: 3.3.2
+2026-04-08 19:06:31,844:INFO:             IPython: 8.14.0
+2026-04-08 19:06:31,844:INFO:          ipywidgets: 8.1.0
+2026-04-08 19:06:31,844:INFO:                tqdm: 4.67.1
+2026-04-08 19:06:31,844:INFO:               numpy: 1.26.4
+2026-04-08 19:06:31,844:INFO:              pandas: 2.3.0
+2026-04-08 19:06:31,844:INFO:              jinja2: 3.1.6
+2026-04-08 19:06:31,845:INFO:               scipy: 1.11.4
+2026-04-08 19:06:31,845:INFO:              joblib: 1.3.2
+2026-04-08 19:06:31,845:INFO:             sklearn: 1.4.2
+2026-04-08 19:06:31,845:INFO:                pyod: 2.1.0
+2026-04-08 19:06:31,845:INFO:            imblearn: 0.14.1
+2026-04-08 19:06:31,845:INFO:   category_encoders: 2.7.0
+2026-04-08 19:06:31,846:INFO:            lightgbm: 4.6.0
+2026-04-08 19:06:31,846:INFO:               numba: 0.62.1
+2026-04-08 19:06:31,846:INFO:            requests: 2.32.5
+2026-04-08 19:06:31,847:INFO:          matplotlib: 3.7.2
+2026-04-08 19:06:31,847:INFO:          scikitplot: 0.3.7
+2026-04-08 19:06:31,847:INFO:         yellowbrick: 1.5
+2026-04-08 19:06:31,847:INFO:              plotly: 5.24.1
+2026-04-08 19:06:31,847:INFO:    plotly-resampler: Not installed
+2026-04-08 19:06:31,847:INFO:             kaleido: 1.2.0
+2026-04-08 19:06:31,847:INFO:           schemdraw: 0.15
+2026-04-08 19:06:31,847:INFO:         statsmodels: 0.14.5
+2026-04-08 19:06:31,847:INFO:              sktime: 0.26.0
+2026-04-08 19:06:31,848:INFO:               tbats: 1.1.3
+2026-04-08 19:06:31,848:INFO:            pmdarima: 2.0.4
+2026-04-08 19:06:31,849:INFO:              psutil: 5.9.5
+2026-04-08 19:06:31,849:INFO:          markupsafe: 2.1.3
+2026-04-08 19:06:31,849:INFO:             pickle5: Not installed
+2026-04-08 19:06:31,849:INFO:         cloudpickle: 3.1.2
+2026-04-08 19:06:31,849:INFO:         deprecation: 2.1.0
+2026-04-08 19:06:31,849:INFO:              xxhash: 3.5.0
+2026-04-08 19:06:31,849:INFO:           wurlitzer: Not installed
+2026-04-08 19:06:31,849:INFO:PyCaret optional dependencies:
+2026-04-08 19:06:47,910:INFO:                shap: Not installed
+2026-04-08 19:06:47,910:INFO:           interpret: Not installed
+2026-04-08 19:06:47,910:INFO:                umap: Not installed
+2026-04-08 19:06:47,910:INFO:     ydata_profiling: Not installed
+2026-04-08 19:06:47,911:INFO:  explainerdashboard: Not installed
+2026-04-08 19:06:47,911:INFO:             autoviz: Not installed
+2026-04-08 19:06:47,911:INFO:           fairlearn: Not installed
+2026-04-08 19:06:47,911:INFO:          deepchecks: Not installed
+2026-04-08 19:06:47,911:INFO:             xgboost: Not installed
+2026-04-08 19:06:47,912:INFO:            catboost: Not installed
+2026-04-08 19:06:47,912:INFO:              kmodes: Not installed
+2026-04-08 19:06:47,912:INFO:             mlxtend: Not installed
+2026-04-08 19:06:47,912:INFO:       statsforecast: Not installed
+2026-04-08 19:06:47,912:INFO:        tune_sklearn: Not installed
+2026-04-08 19:06:47,912:INFO:                 ray: Not installed
+2026-04-08 19:06:47,912:INFO:            hyperopt: Not installed
+2026-04-08 19:06:47,912:INFO:              optuna: Not installed
+2026-04-08 19:06:47,912:INFO:               skopt: Not installed
+2026-04-08 19:06:47,912:INFO:              mlflow: Not installed
+2026-04-08 19:06:47,912:INFO:              gradio: 5.38.0
+2026-04-08 19:06:47,912:INFO:             fastapi: 0.116.1
+2026-04-08 19:06:47,913:INFO:             uvicorn: 0.40.0
+2026-04-08 19:06:47,913:INFO:              m2cgen: Not installed
+2026-04-08 19:06:47,913:INFO:           evidently: 0.4.40
+2026-04-08 19:06:47,913:INFO:               fugue: Not installed
+2026-04-08 19:06:47,913:INFO:           streamlit: 1.28.2
+2026-04-08 19:06:47,913:INFO:             prophet: Not installed
+2026-04-08 19:06:47,913:INFO:None
+2026-04-08 19:06:47,913:INFO:Set up data.
+2026-04-08 19:06:48,853:INFO:Set up folding strategy.
+2026-04-08 19:06:48,853:INFO:Set up train/test split.
+2026-04-08 19:06:49,252:INFO:Set up index.
+2026-04-08 19:06:49,263:INFO:Assigning column types.
+2026-04-08 19:06:49,857:INFO:Engine successfully changes for model 'lr' to 'sklearn'.
+2026-04-08 19:06:50,041:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2026-04-08 19:06:50,059:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2026-04-08 19:06:50,195:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2026-04-08 19:06:50,197:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2026-04-08 19:06:50,402:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2026-04-08 19:06:50,405:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2026-04-08 19:06:50,528:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2026-04-08 19:06:50,528:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2026-04-08 19:06:50,529:INFO:Engine successfully changes for model 'knn' to 'sklearn'.
+2026-04-08 19:06:50,731:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2026-04-08 19:06:50,839:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2026-04-08 19:06:50,841:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2026-04-08 19:06:50,980:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2026-04-08 19:06:51,072:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2026-04-08 19:06:51,074:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2026-04-08 19:06:51,075:INFO:Engine successfully changes for model 'rbfsvm' to 'sklearn'.
+2026-04-08 19:06:51,360:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2026-04-08 19:06:51,360:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2026-04-08 19:06:51,545:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2026-04-08 19:06:51,547:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2026-04-08 19:06:51,558:INFO:Preparing preprocessing pipeline...
+2026-04-08 19:06:51,659:INFO:Set up label encoding.
+2026-04-08 19:06:51,659:INFO:Set up simple imputation.
+2026-04-08 19:06:53,067:INFO:Finished creating preprocessing pipeline.
+2026-04-08 19:06:53,086:INFO:Pipeline: Pipeline(memory=FastMemory(location=C:\Users\barun\AppData\Local\Temp\joblib),
+         steps=[('label_encoding',
+                 TransformerWrapperWithInverse(exclude=None, include=None,
+                                               transformer=LabelEncoder())),
+                ('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['acara', 'administrasi', 'adobe',
+                                             'afiliasi', 'agen', 'agustus',
+                                             'ahli', 'air', 'ajakan', 'akhir',
+                                             'akhirnya',...
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              strategy='mean'))),
+                ('categorical_imputer',
+                 TransformerWrapper(exclude=None, include=[],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              strategy='most_frequent')))],
+         verbose=False)
+2026-04-08 19:06:53,086:INFO:Creating final display dataframe.
+2026-04-08 19:06:55,387:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\pycaret\internal\pipeline.py:289: UserWarning: Persisting input arguments took 0.83s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, y = self._memory_full_transform(
+
+2026-04-08 19:06:57,449:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\pycaret\internal\pipeline.py:289: UserWarning: Persisting input arguments took 0.57s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, y = self._memory_full_transform(
+
+2026-04-08 19:06:59,359:INFO:Setup _display_container:                     Description             Value
+0                    Session id                42
+1                        Target             label
+2                   Target type            Binary
+3                Target mapping   ham: 0, spam: 1
+4           Original data shape      (2636, 1001)
+5        Transformed data shape      (2636, 1001)
+6   Transformed train set shape      (1845, 1001)
+7    Transformed test set shape       (791, 1001)
+8              Numeric features              1000
+9                    Preprocess              True
+10              Imputation type            simple
+11           Numeric imputation              mean
+12       Categorical imputation              mode
+13               Fold Generator   StratifiedKFold
+14                  Fold Number                10
+15                     CPU Jobs                -1
+16                      Use GPU             False
+17               Log Experiment             False
+18              Experiment Name  clf-default-name
+19                          USI              97a4
+2026-04-08 19:06:59,419:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\IPython\core\formatters.py:344: FutureWarning: Index.format is deprecated and will be removed in a future version. Convert using index.astype(str) or index.map(formatter) instead.
+  return method()
+
+2026-04-08 19:06:59,420:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\IPython\core\formatters.py:344: FutureWarning: RangeIndex.format is deprecated and will be removed in a future version. Convert using index.astype(str) or index.map(formatter) instead.
+  return method()
+
+2026-04-08 19:06:59,759:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2026-04-08 19:06:59,761:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2026-04-08 19:07:00,093:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2026-04-08 19:07:00,094:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2026-04-08 19:07:00,100:INFO:setup() successfully completed in 28.91s...............
+2026-04-08 19:07:00,136:INFO:Initializing compare_models()
+2026-04-08 19:07:00,136:INFO:compare_models(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001F5A33815D0>, include=['svm', 'nb', 'lr'], exclude=None, fold=None, round=4, cross_validation=True, sort=Accuracy, n_select=1, budget_time=None, turbo=True, errors=ignore, fit_kwargs=None, groups=None, experiment_custom_tags=None, probability_threshold=None, verbose=True, parallel=None, caller_params={'self': <pycaret.classification.oop.ClassificationExperiment object at 0x000001F5A33815D0>, 'include': ['svm', 'nb', 'lr'], 'exclude': None, 'fold': None, 'round': 4, 'cross_validation': True, 'sort': 'Accuracy', 'n_select': 1, 'budget_time': None, 'turbo': True, 'errors': 'ignore', 'fit_kwargs': None, 'groups': None, 'experiment_custom_tags': None, 'probability_threshold': None, 'engine': None, 'verbose': True, 'parallel': None, '__class__': <class 'pycaret.classification.oop.ClassificationExperiment'>})
+2026-04-08 19:07:00,136:INFO:Checking exceptions
+2026-04-08 19:07:00,583:INFO:Preparing display monitor
+2026-04-08 19:07:00,666:INFO:Initializing SVM - Linear Kernel
+2026-04-08 19:07:00,669:INFO:Total runtime is 5.278984705607096e-05 minutes
+2026-04-08 19:07:00,685:INFO:SubProcess create_model() called ==================================
+2026-04-08 19:07:00,686:INFO:Initializing create_model()
+2026-04-08 19:07:00,687:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001F5A33815D0>, estimator=svm, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001F5A1D1DAD0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2026-04-08 19:07:00,687:INFO:Checking exceptions
+2026-04-08 19:07:00,687:INFO:Importing libraries
+2026-04-08 19:07:00,687:INFO:Copying training dataset
+2026-04-08 19:07:01,198:INFO:Defining folds
+2026-04-08 19:07:01,199:INFO:Declaring metric variables
+2026-04-08 19:07:01,208:INFO:Importing untrained model
+2026-04-08 19:07:01,221:INFO:SVM - Linear Kernel Imported successfully
+2026-04-08 19:07:01,257:INFO:Starting cross validation
+2026-04-08 19:07:01,267:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2026-04-08 19:07:26,162:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\_distutils_hack\__init__.py:33: UserWarning: Setuptools is replacing distutils.
+  warnings.warn("Setuptools is replacing distutils.")
+
+2026-04-08 19:07:26,237:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\_distutils_hack\__init__.py:33: UserWarning: Setuptools is replacing distutils.
+  warnings.warn("Setuptools is replacing distutils.")
+
+2026-04-08 19:07:26,299:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\_distutils_hack\__init__.py:33: UserWarning: Setuptools is replacing distutils.
+  warnings.warn("Setuptools is replacing distutils.")
+
+2026-04-08 19:07:26,374:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\_distutils_hack\__init__.py:33: UserWarning: Setuptools is replacing distutils.
+  warnings.warn("Setuptools is replacing distutils.")
+
+2026-04-08 19:07:26,445:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\_distutils_hack\__init__.py:33: UserWarning: Setuptools is replacing distutils.
+  warnings.warn("Setuptools is replacing distutils.")
+
+2026-04-08 19:07:26,459:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\_distutils_hack\__init__.py:33: UserWarning: Setuptools is replacing distutils.
+  warnings.warn("Setuptools is replacing distutils.")
+
+2026-04-08 19:07:26,464:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\_distutils_hack\__init__.py:33: UserWarning: Setuptools is replacing distutils.
+  warnings.warn("Setuptools is replacing distutils.")
+
+2026-04-08 19:07:26,465:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\_distutils_hack\__init__.py:33: UserWarning: Setuptools is replacing distutils.
+  warnings.warn("Setuptools is replacing distutils.")
+
+2026-04-08 19:07:26,660:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\_distutils_hack\__init__.py:33: UserWarning: Setuptools is replacing distutils.
+  warnings.warn("Setuptools is replacing distutils.")
+
+2026-04-08 19:07:26,675:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\_distutils_hack\__init__.py:33: UserWarning: Setuptools is replacing distutils.
+  warnings.warn("Setuptools is replacing distutils.")
+
+2026-04-08 19:07:27,049:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\pycaret\internal\pipeline.py:148: UserWarning: Version mismatch:
+current: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.1.4', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+pickle: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.3.0', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+  warnings.warn(
+
+2026-04-08 19:07:27,090:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\pycaret\internal\pipeline.py:148: UserWarning: Version mismatch:
+current: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.1.4', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+pickle: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.3.0', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+  warnings.warn(
+
+2026-04-08 19:07:27,101:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\pycaret\internal\pipeline.py:148: UserWarning: Version mismatch:
+current: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.1.4', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+pickle: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.3.0', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+  warnings.warn(
+
+2026-04-08 19:07:27,109:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\pycaret\internal\pipeline.py:148: UserWarning: Version mismatch:
+current: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.1.4', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+pickle: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.3.0', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+  warnings.warn(
+
+2026-04-08 19:07:27,175:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\pycaret\internal\pipeline.py:148: UserWarning: Version mismatch:
+current: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.1.4', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+pickle: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.3.0', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+  warnings.warn(
+
+2026-04-08 19:07:27,178:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\pycaret\internal\pipeline.py:148: UserWarning: Version mismatch:
+current: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.1.4', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+pickle: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.3.0', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+  warnings.warn(
+
+2026-04-08 19:07:27,213:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\pycaret\internal\pipeline.py:148: UserWarning: Version mismatch:
+current: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.1.4', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+pickle: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.3.0', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+  warnings.warn(
+
+2026-04-08 19:07:27,216:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\pycaret\internal\pipeline.py:148: UserWarning: Version mismatch:
+current: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.1.4', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+pickle: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.3.0', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+  warnings.warn(
+
+2026-04-08 19:07:27,656:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\pycaret\internal\pipeline.py:148: UserWarning: Version mismatch:
+current: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.1.4', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+pickle: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.3.0', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+  warnings.warn(
+
+2026-04-08 19:07:27,680:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\pycaret\internal\pipeline.py:148: UserWarning: Version mismatch:
+current: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.1.4', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+pickle: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.3.0', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+  warnings.warn(
+
+2026-04-08 19:07:27,783:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:27,797:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:27,803:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:27,809:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:27,810:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:27,815:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:27,816:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:27,816:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:27,818:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:27,821:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:27,830:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:27,832:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:27,843:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:27,845:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:27,845:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:27,852:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:27,855:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:27,863:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:27,865:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:27,870:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:27,879:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:27,879:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:27,888:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:28,380:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:28,395:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:28,407:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:28,452:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:28,459:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:28,475:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:28,512:INFO:Calculating mean and std
+2026-04-08 19:07:28,516:INFO:Creating metrics dataframe
+2026-04-08 19:07:28,523:INFO:Uploading results into container
+2026-04-08 19:07:28,526:INFO:Uploading model into container now
+2026-04-08 19:07:28,528:INFO:_master_model_container: 1
+2026-04-08 19:07:28,529:INFO:_display_container: 2
+2026-04-08 19:07:28,530:INFO:SGDClassifier(alpha=0.0001, average=False, class_weight=None,
+              early_stopping=False, epsilon=0.1, eta0=0.001, fit_intercept=True,
+              l1_ratio=0.15, learning_rate='optimal', loss='hinge',
+              max_iter=1000, n_iter_no_change=5, n_jobs=-1, penalty='l2',
+              power_t=0.5, random_state=42, shuffle=True, tol=0.001,
+              validation_fraction=0.1, verbose=0, warm_start=False)
+2026-04-08 19:07:28,530:INFO:create_model() successfully completed......................................
+2026-04-08 19:07:28,881:INFO:SubProcess create_model() end ==================================
+2026-04-08 19:07:28,881:INFO:Creating metrics dataframe
+2026-04-08 19:07:28,898:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\IPython\core\formatters.py:344: FutureWarning: Index.format is deprecated and will be removed in a future version. Convert using index.astype(str) or index.map(formatter) instead.
+  return method()
+
+2026-04-08 19:07:28,911:INFO:Initializing Naive Bayes
+2026-04-08 19:07:28,912:INFO:Total runtime is 0.4707544247309367 minutes
+2026-04-08 19:07:28,927:INFO:SubProcess create_model() called ==================================
+2026-04-08 19:07:28,928:INFO:Initializing create_model()
+2026-04-08 19:07:28,929:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001F5A33815D0>, estimator=nb, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001F5A1D1DAD0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2026-04-08 19:07:28,929:INFO:Checking exceptions
+2026-04-08 19:07:28,929:INFO:Importing libraries
+2026-04-08 19:07:28,930:INFO:Copying training dataset
+2026-04-08 19:07:29,432:INFO:Defining folds
+2026-04-08 19:07:29,432:INFO:Declaring metric variables
+2026-04-08 19:07:29,441:INFO:Importing untrained model
+2026-04-08 19:07:29,452:INFO:Naive Bayes Imported successfully
+2026-04-08 19:07:29,470:INFO:Starting cross validation
+2026-04-08 19:07:29,476:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2026-04-08 19:07:29,930:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\pycaret\internal\pipeline.py:148: UserWarning: Version mismatch:
+current: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.1.4', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+pickle: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.3.0', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+  warnings.warn(
+
+2026-04-08 19:07:30,017:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\pycaret\internal\pipeline.py:148: UserWarning: Version mismatch:
+current: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.1.4', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+pickle: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.3.0', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+  warnings.warn(
+
+2026-04-08 19:07:30,119:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\pycaret\internal\pipeline.py:148: UserWarning: Version mismatch:
+current: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.1.4', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+pickle: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.3.0', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+  warnings.warn(
+
+2026-04-08 19:07:30,240:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\pycaret\internal\pipeline.py:148: UserWarning: Version mismatch:
+current: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.1.4', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+pickle: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.3.0', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+  warnings.warn(
+
+2026-04-08 19:07:30,373:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:30,381:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\pycaret\internal\pipeline.py:148: UserWarning: Version mismatch:
+current: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.1.4', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+pickle: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.3.0', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+  warnings.warn(
+
+2026-04-08 19:07:30,393:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:30,405:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:30,505:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\pycaret\internal\pipeline.py:148: UserWarning: Version mismatch:
+current: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.1.4', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+pickle: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.3.0', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+  warnings.warn(
+
+2026-04-08 19:07:30,516:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:30,524:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:30,532:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:30,634:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:30,635:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\pycaret\internal\pipeline.py:148: UserWarning: Version mismatch:
+current: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.1.4', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+pickle: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.3.0', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+  warnings.warn(
+
+2026-04-08 19:07:30,644:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:30,652:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:30,758:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:30,763:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\pycaret\internal\pipeline.py:148: UserWarning: Version mismatch:
+current: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.1.4', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+pickle: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.3.0', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+  warnings.warn(
+
+2026-04-08 19:07:30,766:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:30,772:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:30,857:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:30,867:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:30,874:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:30,976:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:30,984:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:30,992:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:31,107:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:31,120:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:31,132:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:31,245:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:31,251:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:31,258:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:39,575:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\_distutils_hack\__init__.py:33: UserWarning: Setuptools is replacing distutils.
+  warnings.warn("Setuptools is replacing distutils.")
+
+2026-04-08 19:07:39,613:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\_distutils_hack\__init__.py:33: UserWarning: Setuptools is replacing distutils.
+  warnings.warn("Setuptools is replacing distutils.")
+
+2026-04-08 19:07:40,081:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\pycaret\internal\pipeline.py:148: UserWarning: Version mismatch:
+current: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.1.4', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+pickle: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.3.0', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+  warnings.warn(
+
+2026-04-08 19:07:40,109:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\pycaret\internal\pipeline.py:148: UserWarning: Version mismatch:
+current: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.1.4', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+pickle: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.3.0', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+  warnings.warn(
+
+2026-04-08 19:07:40,554:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:40,562:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:40,568:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:40,578:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:40,586:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:40,592:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:40,622:INFO:Calculating mean and std
+2026-04-08 19:07:40,624:INFO:Creating metrics dataframe
+2026-04-08 19:07:40,632:INFO:Uploading results into container
+2026-04-08 19:07:40,636:INFO:Uploading model into container now
+2026-04-08 19:07:40,639:INFO:_master_model_container: 2
+2026-04-08 19:07:40,639:INFO:_display_container: 2
+2026-04-08 19:07:40,642:INFO:GaussianNB(priors=None, var_smoothing=1e-09)
+2026-04-08 19:07:40,644:INFO:create_model() successfully completed......................................
+2026-04-08 19:07:40,970:INFO:SubProcess create_model() end ==================================
+2026-04-08 19:07:40,970:INFO:Creating metrics dataframe
+2026-04-08 19:07:40,987:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\IPython\core\formatters.py:344: FutureWarning: Index.format is deprecated and will be removed in a future version. Convert using index.astype(str) or index.map(formatter) instead.
+  return method()
+
+2026-04-08 19:07:40,995:INFO:Initializing Logistic Regression
+2026-04-08 19:07:40,995:INFO:Total runtime is 0.6721541285514832 minutes
+2026-04-08 19:07:41,005:INFO:SubProcess create_model() called ==================================
+2026-04-08 19:07:41,005:INFO:Initializing create_model()
+2026-04-08 19:07:41,007:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001F5A33815D0>, estimator=lr, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001F5A1D1DAD0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2026-04-08 19:07:41,007:INFO:Checking exceptions
+2026-04-08 19:07:41,007:INFO:Importing libraries
+2026-04-08 19:07:41,007:INFO:Copying training dataset
+2026-04-08 19:07:41,450:INFO:Defining folds
+2026-04-08 19:07:41,450:INFO:Declaring metric variables
+2026-04-08 19:07:41,460:INFO:Importing untrained model
+2026-04-08 19:07:41,471:INFO:Logistic Regression Imported successfully
+2026-04-08 19:07:41,486:INFO:Starting cross validation
+2026-04-08 19:07:41,494:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2026-04-08 19:07:41,645:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\pycaret\internal\pipeline.py:148: UserWarning: Version mismatch:
+current: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.1.4', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+pickle: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.3.0', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+  warnings.warn(
+
+2026-04-08 19:07:41,810:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\pycaret\internal\pipeline.py:148: UserWarning: Version mismatch:
+current: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.1.4', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+pickle: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.3.0', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+  warnings.warn(
+
+2026-04-08 19:07:41,962:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\pycaret\internal\pipeline.py:148: UserWarning: Version mismatch:
+current: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.1.4', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+pickle: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.3.0', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+  warnings.warn(
+
+2026-04-08 19:07:42,070:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\pycaret\internal\pipeline.py:148: UserWarning: Version mismatch:
+current: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.1.4', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+pickle: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.3.0', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+  warnings.warn(
+
+2026-04-08 19:07:42,218:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\pycaret\internal\pipeline.py:148: UserWarning: Version mismatch:
+current: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.1.4', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+pickle: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.3.0', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+  warnings.warn(
+
+2026-04-08 19:07:42,267:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:42,277:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:42,289:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:42,369:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\pycaret\internal\pipeline.py:148: UserWarning: Version mismatch:
+current: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.1.4', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+pickle: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.3.0', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+  warnings.warn(
+
+2026-04-08 19:07:42,455:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:42,465:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:42,470:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:42,515:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\pycaret\internal\pipeline.py:148: UserWarning: Version mismatch:
+current: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.1.4', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+pickle: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.3.0', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+  warnings.warn(
+
+2026-04-08 19:07:42,575:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:42,585:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:42,594:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:42,652:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\pycaret\internal\pipeline.py:148: UserWarning: Version mismatch:
+current: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.1.4', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+pickle: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.3.0', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+  warnings.warn(
+
+2026-04-08 19:07:42,700:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:42,710:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:42,716:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:42,783:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\pycaret\internal\pipeline.py:148: UserWarning: Version mismatch:
+current: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.1.4', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+pickle: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.3.0', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+  warnings.warn(
+
+2026-04-08 19:07:42,841:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:42,850:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:42,859:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:42,916:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\pycaret\internal\pipeline.py:148: UserWarning: Version mismatch:
+current: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.1.4', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+pickle: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2', 'IPython': '8.14.0', 'ipywidgets': '8.1.0', 'tqdm': '4.67.1', 'numpy': '1.26.4', 'pandas': '2.3.0', 'jinja2': '3.1.6', 'scipy': '1.11.4', 'joblib': '1.3.2', 'sklearn': '1.4.2', 'pyod': '2.1.0', 'imblearn': '0.14.1', 'category_encoders': '2.7.0', 'lightgbm': '4.6.0', 'numba': '0.62.1', 'requests': '2.32.5', 'matplotlib': '3.7.2', 'scikitplot': '0.3.7', 'yellowbrick': '1.5', 'plotly': '5.24.1', 'plotly-resampler': 'Not installed', 'kaleido': '1.2.0', 'schemdraw': '0.15', 'statsmodels': '0.14.5', 'sktime': '0.26.0', 'tbats': '1.1.3', 'pmdarima': '2.0.4', 'psutil': '5.9.5', 'markupsafe': '2.1.3', 'pickle5': 'Not installed', 'cloudpickle': '3.1.2', 'deprecation': '2.1.0', 'xxhash': '3.5.0', 'wurlitzer': 'Not installed'}, 'python': {'version': '3.11.4', 'machine': 'AMD64'}}
+  warnings.warn(
+
+2026-04-08 19:07:42,979:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:42,989:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:43,000:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:43,069:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:43,080:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:43,085:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:43,185:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:43,188:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:43,192:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:43,335:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:43,345:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:43,351:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:43,415:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:43,419:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:43,425:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 19:07:43,442:INFO:Calculating mean and std
+2026-04-08 19:07:43,445:INFO:Creating metrics dataframe
+2026-04-08 19:07:43,449:INFO:Uploading results into container
+2026-04-08 19:07:43,450:INFO:Uploading model into container now
+2026-04-08 19:07:43,452:INFO:_master_model_container: 3
+2026-04-08 19:07:43,453:INFO:_display_container: 2
+2026-04-08 19:07:43,454:INFO:LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+                   intercept_scaling=1, l1_ratio=None, max_iter=1000,
+                   multi_class='auto', n_jobs=None, penalty='l2',
+                   random_state=42, solver='lbfgs', tol=0.0001, verbose=0,
+                   warm_start=False)
+2026-04-08 19:07:43,454:INFO:create_model() successfully completed......................................
+2026-04-08 19:07:43,686:INFO:SubProcess create_model() end ==================================
+2026-04-08 19:07:43,686:INFO:Creating metrics dataframe
+2026-04-08 19:07:43,695:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\IPython\core\formatters.py:344: FutureWarning: Index.format is deprecated and will be removed in a future version. Convert using index.astype(str) or index.map(formatter) instead.
+  return method()
+
+2026-04-08 19:07:43,705:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:339: FutureWarning: Styler.applymap has been deprecated. Use Styler.map instead.
+  .applymap(highlight_cols, subset=["TT (Sec)"])
+
+2026-04-08 19:07:43,729:INFO:Initializing create_model()
+2026-04-08 19:07:43,730:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001F5A33815D0>, estimator=LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+                   intercept_scaling=1, l1_ratio=None, max_iter=1000,
+                   multi_class='auto', n_jobs=None, penalty='l2',
+                   random_state=42, solver='lbfgs', tol=0.0001, verbose=0,
+                   warm_start=False), fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2026-04-08 19:07:43,730:INFO:Checking exceptions
+2026-04-08 19:07:43,734:INFO:Importing libraries
+2026-04-08 19:07:43,735:INFO:Copying training dataset
+2026-04-08 19:07:44,260:INFO:Defining folds
+2026-04-08 19:07:44,260:INFO:Declaring metric variables
+2026-04-08 19:07:44,261:INFO:Importing untrained model
+2026-04-08 19:07:44,262:INFO:Declaring custom model
+2026-04-08 19:07:44,263:INFO:Logistic Regression Imported successfully
+2026-04-08 19:07:44,272:INFO:Cross validation set to False
+2026-04-08 19:07:44,273:INFO:Fitting Model
+2026-04-08 19:07:44,569:INFO:LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+                   intercept_scaling=1, l1_ratio=None, max_iter=1000,
+                   multi_class='auto', n_jobs=None, penalty='l2',
+                   random_state=42, solver='lbfgs', tol=0.0001, verbose=0,
+                   warm_start=False)
+2026-04-08 19:07:44,569:INFO:create_model() successfully completed......................................
+2026-04-08 19:07:44,850:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\IPython\core\formatters.py:344: FutureWarning: Index.format is deprecated and will be removed in a future version. Convert using index.astype(str) or index.map(formatter) instead.
+  return method()
+
+2026-04-08 19:07:44,855:INFO:_master_model_container: 3
+2026-04-08 19:07:44,855:INFO:_display_container: 2
+2026-04-08 19:07:44,858:INFO:LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+                   intercept_scaling=1, l1_ratio=None, max_iter=1000,
+                   multi_class='auto', n_jobs=None, penalty='l2',
+                   random_state=42, solver='lbfgs', tol=0.0001, verbose=0,
+                   warm_start=False)
+2026-04-08 19:07:44,858:INFO:compare_models() successfully completed......................................
+2026-04-08 19:27:52,443:INFO:Initializing predict_model()
+2026-04-08 19:27:52,443:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001F5A33815D0>, estimator=LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+                   intercept_scaling=1, l1_ratio=None, max_iter=1000,
+                   multi_class='auto', n_jobs=None, penalty='l2',
+                   random_state=42, solver='lbfgs', tol=0.0001, verbose=0,
+                   warm_start=False), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x000001F5AA1A5120>)
+2026-04-08 19:27:52,443:INFO:Checking exceptions
+2026-04-08 19:27:52,443:INFO:Preloading libraries
+2026-04-08 19:27:52,459:INFO:Set up data.
+2026-04-08 19:27:52,892:INFO:Set up index.
