@@ -814,3 +814,629 @@ pickle: {'deps_info': {'pip': '25.3', 'setuptools': '65.5.0', 'pycaret': '3.3.2'
 2026-04-08 19:27:52,443:INFO:Preloading libraries
 2026-04-08 19:27:52,459:INFO:Set up data.
 2026-04-08 19:27:52,892:INFO:Set up index.
+2026-04-08 20:17:07,865:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2026-04-08 20:17:07,866:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2026-04-08 20:17:07,866:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2026-04-08 20:17:07,866:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2026-04-08 20:17:10,095:INFO:PyCaret ClassificationExperiment
+2026-04-08 20:17:10,095:INFO:Logging name: clf-default-name
+2026-04-08 20:17:10,095:INFO:ML Usecase: MLUsecase.CLASSIFICATION
+2026-04-08 20:17:10,095:INFO:version 3.3.2
+2026-04-08 20:17:10,095:INFO:Initializing setup()
+2026-04-08 20:17:10,095:INFO:self.USI: a08c
+2026-04-08 20:17:10,095:INFO:self._variable_keys: {'y_test', 'data', 'exp_id', 'memory', 'html_param', 'logging_param', 'fold_groups_param', 'target_param', 'X', 'y', '_available_plots', 'gpu_param', 'gpu_n_jobs_param', 'fold_shuffle_param', 'pipeline', 'exp_name_log', 'X_train', 'y_train', 'fold_generator', '_ml_usecase', 'idx', 'seed', 'X_test', 'USI', 'log_plots_param', 'is_multiclass', 'fix_imbalance', 'n_jobs_param'}
+2026-04-08 20:17:10,095:INFO:Checking environment
+2026-04-08 20:17:10,095:INFO:python_version: 3.11.4
+2026-04-08 20:17:10,095:INFO:python_build: ('tags/v3.11.4:d2340ef', 'Jun  7 2023 05:45:37')
+2026-04-08 20:17:10,095:INFO:machine: AMD64
+2026-04-08 20:17:10,095:INFO:platform: Windows-10-10.0.26200-SP0
+2026-04-08 20:17:10,095:INFO:Memory: svmem(total=16859041792, available=4952600576, percent=70.6, used=11906441216, free=4952600576)
+2026-04-08 20:17:10,095:INFO:Physical Core: 10
+2026-04-08 20:17:10,095:INFO:Logical Core: 12
+2026-04-08 20:17:10,095:INFO:Checking libraries
+2026-04-08 20:17:10,095:INFO:System:
+2026-04-08 20:17:10,095:INFO:    python: 3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)]
+2026-04-08 20:17:10,095:INFO:executable: c:\Users\barun\AppData\Local\Programs\Python\Python311\python.exe
+2026-04-08 20:17:10,095:INFO:   machine: Windows-10-10.0.26200-SP0
+2026-04-08 20:17:10,095:INFO:PyCaret required dependencies:
+2026-04-08 20:17:10,127:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\_distutils_hack\__init__.py:33: UserWarning: Setuptools is replacing distutils.
+  warnings.warn("Setuptools is replacing distutils.")
+
+2026-04-08 20:17:10,418:INFO:                 pip: 25.3
+2026-04-08 20:17:10,418:INFO:          setuptools: 65.5.0
+2026-04-08 20:17:10,418:INFO:             pycaret: 3.3.2
+2026-04-08 20:17:10,418:INFO:             IPython: 8.14.0
+2026-04-08 20:17:10,418:INFO:          ipywidgets: 8.1.0
+2026-04-08 20:17:10,418:INFO:                tqdm: 4.67.1
+2026-04-08 20:17:10,418:INFO:               numpy: 1.26.4
+2026-04-08 20:17:10,418:INFO:              pandas: 2.1.4
+2026-04-08 20:17:10,418:INFO:              jinja2: 3.1.6
+2026-04-08 20:17:10,418:INFO:               scipy: 1.11.4
+2026-04-08 20:17:10,418:INFO:              joblib: 1.3.2
+2026-04-08 20:17:10,418:INFO:             sklearn: 1.4.2
+2026-04-08 20:17:10,418:INFO:                pyod: 2.1.0
+2026-04-08 20:17:10,418:INFO:            imblearn: 0.14.1
+2026-04-08 20:17:10,418:INFO:   category_encoders: 2.7.0
+2026-04-08 20:17:10,418:INFO:            lightgbm: 4.6.0
+2026-04-08 20:17:10,418:INFO:               numba: 0.62.1
+2026-04-08 20:17:10,418:INFO:            requests: 2.32.5
+2026-04-08 20:17:10,418:INFO:          matplotlib: 3.7.2
+2026-04-08 20:17:10,418:INFO:          scikitplot: 0.3.7
+2026-04-08 20:17:10,418:INFO:         yellowbrick: 1.5
+2026-04-08 20:17:10,418:INFO:              plotly: 5.24.1
+2026-04-08 20:17:10,418:INFO:    plotly-resampler: Not installed
+2026-04-08 20:17:10,418:INFO:             kaleido: 1.2.0
+2026-04-08 20:17:10,420:INFO:           schemdraw: 0.15
+2026-04-08 20:17:10,420:INFO:         statsmodels: 0.14.5
+2026-04-08 20:17:10,420:INFO:              sktime: 0.26.0
+2026-04-08 20:17:10,420:INFO:               tbats: 1.1.3
+2026-04-08 20:17:10,420:INFO:            pmdarima: 2.0.4
+2026-04-08 20:17:10,420:INFO:              psutil: 5.9.5
+2026-04-08 20:17:10,420:INFO:          markupsafe: 2.1.3
+2026-04-08 20:17:10,420:INFO:             pickle5: Not installed
+2026-04-08 20:17:10,420:INFO:         cloudpickle: 3.1.2
+2026-04-08 20:17:10,420:INFO:         deprecation: 2.1.0
+2026-04-08 20:17:10,420:INFO:              xxhash: 3.5.0
+2026-04-08 20:17:10,420:INFO:           wurlitzer: Not installed
+2026-04-08 20:17:10,420:INFO:PyCaret optional dependencies:
+2026-04-08 20:17:19,268:INFO:                shap: Not installed
+2026-04-08 20:17:19,268:INFO:           interpret: Not installed
+2026-04-08 20:17:19,268:INFO:                umap: Not installed
+2026-04-08 20:17:19,268:INFO:     ydata_profiling: Not installed
+2026-04-08 20:17:19,269:INFO:  explainerdashboard: Not installed
+2026-04-08 20:17:19,269:INFO:             autoviz: Not installed
+2026-04-08 20:17:19,269:INFO:           fairlearn: Not installed
+2026-04-08 20:17:19,269:INFO:          deepchecks: Not installed
+2026-04-08 20:17:19,269:INFO:             xgboost: Not installed
+2026-04-08 20:17:19,269:INFO:            catboost: Not installed
+2026-04-08 20:17:19,269:INFO:              kmodes: Not installed
+2026-04-08 20:17:19,269:INFO:             mlxtend: Not installed
+2026-04-08 20:17:19,269:INFO:       statsforecast: Not installed
+2026-04-08 20:17:19,269:INFO:        tune_sklearn: Not installed
+2026-04-08 20:17:19,269:INFO:                 ray: Not installed
+2026-04-08 20:17:19,269:INFO:            hyperopt: Not installed
+2026-04-08 20:17:19,269:INFO:              optuna: Not installed
+2026-04-08 20:17:19,269:INFO:               skopt: Not installed
+2026-04-08 20:17:19,269:INFO:              mlflow: Not installed
+2026-04-08 20:17:19,269:INFO:              gradio: 5.38.0
+2026-04-08 20:17:19,269:INFO:             fastapi: 0.116.1
+2026-04-08 20:17:19,270:INFO:             uvicorn: 0.40.0
+2026-04-08 20:17:19,270:INFO:              m2cgen: Not installed
+2026-04-08 20:17:19,270:INFO:           evidently: 0.4.40
+2026-04-08 20:17:19,270:INFO:               fugue: Not installed
+2026-04-08 20:17:19,270:INFO:           streamlit: 1.28.2
+2026-04-08 20:17:19,270:INFO:             prophet: Not installed
+2026-04-08 20:17:19,270:INFO:None
+2026-04-08 20:17:19,270:INFO:Set up data.
+2026-04-08 20:17:19,302:INFO:Set up folding strategy.
+2026-04-08 20:17:19,302:INFO:Set up train/test split.
+2026-04-08 20:17:19,519:INFO:Set up index.
+2026-04-08 20:17:19,525:INFO:Assigning column types.
+2026-04-08 20:17:19,552:INFO:Engine successfully changes for model 'lr' to 'sklearn'.
+2026-04-08 20:17:19,625:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2026-04-08 20:17:19,636:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2026-04-08 20:17:19,720:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2026-04-08 20:17:19,720:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2026-04-08 20:17:19,794:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2026-04-08 20:17:19,795:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2026-04-08 20:17:19,835:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2026-04-08 20:17:19,836:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2026-04-08 20:17:19,836:INFO:Engine successfully changes for model 'knn' to 'sklearn'.
+2026-04-08 20:17:19,908:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2026-04-08 20:17:19,942:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2026-04-08 20:17:19,942:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2026-04-08 20:17:20,009:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2026-04-08 20:17:20,054:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2026-04-08 20:17:20,054:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2026-04-08 20:17:20,054:INFO:Engine successfully changes for model 'rbfsvm' to 'sklearn'.
+2026-04-08 20:17:20,170:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2026-04-08 20:17:20,170:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2026-04-08 20:17:20,243:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2026-04-08 20:17:20,243:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2026-04-08 20:17:20,270:INFO:Preparing preprocessing pipeline...
+2026-04-08 20:17:20,280:INFO:Set up label encoding.
+2026-04-08 20:17:20,280:INFO:Set up simple imputation.
+2026-04-08 20:17:20,409:INFO:Finished creating preprocessing pipeline.
+2026-04-08 20:17:20,418:INFO:Pipeline: Pipeline(memory=FastMemory(location=C:\Users\barun\AppData\Local\Temp\joblib),
+         steps=[('label_encoding',
+                 TransformerWrapperWithInverse(exclude=None, include=None,
+                                               transformer=LabelEncoder())),
+                ('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['w2v_0', 'w2v_1', 'w2v_2', 'w2v_3',
+                                             'w2v_4', 'w2v_5', 'w2v_6', 'w2v_7',
+                                             'w2v_8', 'w2v_9', 'w2v_10',
+                                             'w2v_11', 'w...
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              strategy='mean'))),
+                ('categorical_imputer',
+                 TransformerWrapper(exclude=None, include=[],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              strategy='most_frequent')))],
+         verbose=False)
+2026-04-08 20:17:20,418:INFO:Creating final display dataframe.
+2026-04-08 20:17:20,799:INFO:Setup _display_container:                     Description             Value
+0                    Session id                42
+1                        Target             label
+2                   Target type            Binary
+3                Target mapping   ham: 0, spam: 1
+4           Original data shape       (2636, 101)
+5        Transformed data shape       (2636, 101)
+6   Transformed train set shape       (1845, 101)
+7    Transformed test set shape        (791, 101)
+8              Numeric features               100
+9                    Preprocess              True
+10              Imputation type            simple
+11           Numeric imputation              mean
+12       Categorical imputation              mode
+13               Fold Generator   StratifiedKFold
+14                  Fold Number                10
+15                     CPU Jobs                -1
+16                      Use GPU             False
+17               Log Experiment             False
+18              Experiment Name  clf-default-name
+19                          USI              a08c
+2026-04-08 20:17:20,954:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2026-04-08 20:17:20,954:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2026-04-08 20:17:21,063:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2026-04-08 20:17:21,063:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2026-04-08 20:17:21,063:INFO:setup() successfully completed in 10.99s...............
+2026-04-08 20:17:21,081:INFO:Initializing compare_models()
+2026-04-08 20:17:21,081:INFO:compare_models(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001942464A090>, include=['svm', 'nb', 'lr'], exclude=None, fold=None, round=4, cross_validation=True, sort=Accuracy, n_select=1, budget_time=None, turbo=True, errors=ignore, fit_kwargs=None, groups=None, experiment_custom_tags=None, probability_threshold=None, verbose=True, parallel=None, caller_params={'self': <pycaret.classification.oop.ClassificationExperiment object at 0x000001942464A090>, 'include': ['svm', 'nb', 'lr'], 'exclude': None, 'fold': None, 'round': 4, 'cross_validation': True, 'sort': 'Accuracy', 'n_select': 1, 'budget_time': None, 'turbo': True, 'errors': 'ignore', 'fit_kwargs': None, 'groups': None, 'experiment_custom_tags': None, 'probability_threshold': None, 'engine': None, 'verbose': True, 'parallel': None, '__class__': <class 'pycaret.classification.oop.ClassificationExperiment'>})
+2026-04-08 20:17:21,081:INFO:Checking exceptions
+2026-04-08 20:17:21,102:INFO:Preparing display monitor
+2026-04-08 20:17:21,148:INFO:Initializing SVM - Linear Kernel
+2026-04-08 20:17:21,148:INFO:Total runtime is 0.0 minutes
+2026-04-08 20:17:21,153:INFO:SubProcess create_model() called ==================================
+2026-04-08 20:17:21,153:INFO:Initializing create_model()
+2026-04-08 20:17:21,153:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001942464A090>, estimator=svm, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001944563E490>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2026-04-08 20:17:21,153:INFO:Checking exceptions
+2026-04-08 20:17:21,153:INFO:Importing libraries
+2026-04-08 20:17:21,158:INFO:Copying training dataset
+2026-04-08 20:17:21,195:INFO:Defining folds
+2026-04-08 20:17:21,195:INFO:Declaring metric variables
+2026-04-08 20:17:21,200:INFO:Importing untrained model
+2026-04-08 20:17:21,207:INFO:SVM - Linear Kernel Imported successfully
+2026-04-08 20:17:21,222:INFO:Starting cross validation
+2026-04-08 20:17:21,226:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2026-04-08 20:17:27,566:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\_distutils_hack\__init__.py:33: UserWarning: Setuptools is replacing distutils.
+  warnings.warn("Setuptools is replacing distutils.")
+
+2026-04-08 20:17:27,567:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\_distutils_hack\__init__.py:33: UserWarning: Setuptools is replacing distutils.
+  warnings.warn("Setuptools is replacing distutils.")
+
+2026-04-08 20:17:27,573:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\_distutils_hack\__init__.py:33: UserWarning: Setuptools is replacing distutils.
+  warnings.warn("Setuptools is replacing distutils.")
+
+2026-04-08 20:17:27,607:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\_distutils_hack\__init__.py:33: UserWarning: Setuptools is replacing distutils.
+  warnings.warn("Setuptools is replacing distutils.")
+
+2026-04-08 20:17:27,630:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\_distutils_hack\__init__.py:33: UserWarning: Setuptools is replacing distutils.
+  warnings.warn("Setuptools is replacing distutils.")
+
+2026-04-08 20:17:27,630:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\_distutils_hack\__init__.py:33: UserWarning: Setuptools is replacing distutils.
+  warnings.warn("Setuptools is replacing distutils.")
+
+2026-04-08 20:17:27,634:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\_distutils_hack\__init__.py:33: UserWarning: Setuptools is replacing distutils.
+  warnings.warn("Setuptools is replacing distutils.")
+
+2026-04-08 20:17:27,642:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\_distutils_hack\__init__.py:33: UserWarning: Setuptools is replacing distutils.
+  warnings.warn("Setuptools is replacing distutils.")
+
+2026-04-08 20:17:27,652:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\_distutils_hack\__init__.py:33: UserWarning: Setuptools is replacing distutils.
+  warnings.warn("Setuptools is replacing distutils.")
+
+2026-04-08 20:17:27,678:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\_distutils_hack\__init__.py:33: UserWarning: Setuptools is replacing distutils.
+  warnings.warn("Setuptools is replacing distutils.")
+
+2026-04-08 20:17:28,131:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,136:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,143:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,148:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,149:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,153:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,153:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,156:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,157:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,163:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,174:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,182:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,186:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,192:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,196:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,201:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,201:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,203:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,207:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,209:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,213:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,213:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,218:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,225:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,262:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,271:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,276:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,307:INFO:Calculating mean and std
+2026-04-08 20:17:28,313:INFO:Creating metrics dataframe
+2026-04-08 20:17:28,323:INFO:Uploading results into container
+2026-04-08 20:17:28,333:INFO:Uploading model into container now
+2026-04-08 20:17:28,337:INFO:_master_model_container: 1
+2026-04-08 20:17:28,337:INFO:_display_container: 2
+2026-04-08 20:17:28,339:INFO:SGDClassifier(alpha=0.0001, average=False, class_weight=None,
+              early_stopping=False, epsilon=0.1, eta0=0.001, fit_intercept=True,
+              l1_ratio=0.15, learning_rate='optimal', loss='hinge',
+              max_iter=1000, n_iter_no_change=5, n_jobs=-1, penalty='l2',
+              power_t=0.5, random_state=42, shuffle=True, tol=0.001,
+              validation_fraction=0.1, verbose=0, warm_start=False)
+2026-04-08 20:17:28,340:INFO:create_model() successfully completed......................................
+2026-04-08 20:17:28,598:INFO:SubProcess create_model() end ==================================
+2026-04-08 20:17:28,598:INFO:Creating metrics dataframe
+2026-04-08 20:17:28,618:INFO:Initializing Naive Bayes
+2026-04-08 20:17:28,619:INFO:Total runtime is 0.12451588312784831 minutes
+2026-04-08 20:17:28,624:INFO:SubProcess create_model() called ==================================
+2026-04-08 20:17:28,624:INFO:Initializing create_model()
+2026-04-08 20:17:28,625:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001942464A090>, estimator=nb, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001944563E490>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2026-04-08 20:17:28,625:INFO:Checking exceptions
+2026-04-08 20:17:28,625:INFO:Importing libraries
+2026-04-08 20:17:28,625:INFO:Copying training dataset
+2026-04-08 20:17:28,686:INFO:Defining folds
+2026-04-08 20:17:28,687:INFO:Declaring metric variables
+2026-04-08 20:17:28,694:INFO:Importing untrained model
+2026-04-08 20:17:28,703:INFO:Naive Bayes Imported successfully
+2026-04-08 20:17:28,716:INFO:Starting cross validation
+2026-04-08 20:17:28,719:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2026-04-08 20:17:28,831:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,835:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,838:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,844:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,844:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,848:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,851:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,852:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,855:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,857:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,860:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,867:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,869:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,873:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,875:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,875:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,885:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,886:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,890:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,897:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,898:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,905:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,905:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:28,917:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:34,211:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\_distutils_hack\__init__.py:33: UserWarning: Setuptools is replacing distutils.
+  warnings.warn("Setuptools is replacing distutils.")
+
+2026-04-08 20:17:34,231:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\_distutils_hack\__init__.py:33: UserWarning: Setuptools is replacing distutils.
+  warnings.warn("Setuptools is replacing distutils.")
+
+2026-04-08 20:17:34,623:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:34,630:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:34,636:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:34,644:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:34,656:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:34,664:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:34,686:INFO:Calculating mean and std
+2026-04-08 20:17:34,688:INFO:Creating metrics dataframe
+2026-04-08 20:17:34,693:INFO:Uploading results into container
+2026-04-08 20:17:34,694:INFO:Uploading model into container now
+2026-04-08 20:17:34,697:INFO:_master_model_container: 2
+2026-04-08 20:17:34,698:INFO:_display_container: 2
+2026-04-08 20:17:34,698:INFO:GaussianNB(priors=None, var_smoothing=1e-09)
+2026-04-08 20:17:34,700:INFO:create_model() successfully completed......................................
+2026-04-08 20:17:34,892:INFO:SubProcess create_model() end ==================================
+2026-04-08 20:17:34,892:INFO:Creating metrics dataframe
+2026-04-08 20:17:34,906:INFO:Initializing Logistic Regression
+2026-04-08 20:17:34,908:INFO:Total runtime is 0.22933802604675294 minutes
+2026-04-08 20:17:34,913:INFO:SubProcess create_model() called ==================================
+2026-04-08 20:17:34,914:INFO:Initializing create_model()
+2026-04-08 20:17:34,914:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001942464A090>, estimator=lr, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001944563E490>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2026-04-08 20:17:34,914:INFO:Checking exceptions
+2026-04-08 20:17:34,914:INFO:Importing libraries
+2026-04-08 20:17:34,914:INFO:Copying training dataset
+2026-04-08 20:17:34,954:INFO:Defining folds
+2026-04-08 20:17:34,955:INFO:Declaring metric variables
+2026-04-08 20:17:34,966:INFO:Importing untrained model
+2026-04-08 20:17:34,969:INFO:Logistic Regression Imported successfully
+2026-04-08 20:17:34,983:INFO:Starting cross validation
+2026-04-08 20:17:34,986:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2026-04-08 20:17:35,116:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:35,119:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:35,122:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:35,123:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:35,128:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:35,130:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:35,130:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:35,132:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:35,134:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:35,134:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:35,134:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:35,140:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:35,140:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:35,148:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:35,150:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:35,155:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:35,156:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:35,159:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:35,161:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:35,163:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:35,164:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:35,166:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:35,170:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:35,173:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:35,173:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:35,177:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:35,178:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:35,194:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:35,198:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1561: UserWarning: Note that pos_label (set to 'spam') is ignored when average != 'binary' (got 'weighted'). You may use labels=[pos_label] to specify a single positive class.
+  warnings.warn(
+
+2026-04-08 20:17:35,208:INFO:Calculating mean and std
+2026-04-08 20:17:35,209:INFO:Creating metrics dataframe
+2026-04-08 20:17:35,213:INFO:Uploading results into container
+2026-04-08 20:17:35,215:INFO:Uploading model into container now
+2026-04-08 20:17:35,215:INFO:_master_model_container: 3
+2026-04-08 20:17:35,215:INFO:_display_container: 2
+2026-04-08 20:17:35,215:INFO:LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+                   intercept_scaling=1, l1_ratio=None, max_iter=1000,
+                   multi_class='auto', n_jobs=None, penalty='l2',
+                   random_state=42, solver='lbfgs', tol=0.0001, verbose=0,
+                   warm_start=False)
+2026-04-08 20:17:35,215:INFO:create_model() successfully completed......................................
+2026-04-08 20:17:35,383:INFO:SubProcess create_model() end ==================================
+2026-04-08 20:17:35,383:INFO:Creating metrics dataframe
+2026-04-08 20:17:35,446:WARNING:c:\Users\barun\AppData\Local\Programs\Python\Python311\Lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:339: FutureWarning: Styler.applymap has been deprecated. Use Styler.map instead.
+  .applymap(highlight_cols, subset=["TT (Sec)"])
+
+2026-04-08 20:17:35,466:INFO:Initializing create_model()
+2026-04-08 20:17:35,467:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001942464A090>, estimator=SGDClassifier(alpha=0.0001, average=False, class_weight=None,
+              early_stopping=False, epsilon=0.1, eta0=0.001, fit_intercept=True,
+              l1_ratio=0.15, learning_rate='optimal', loss='hinge',
+              max_iter=1000, n_iter_no_change=5, n_jobs=-1, penalty='l2',
+              power_t=0.5, random_state=42, shuffle=True, tol=0.001,
+              validation_fraction=0.1, verbose=0, warm_start=False), fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2026-04-08 20:17:35,467:INFO:Checking exceptions
+2026-04-08 20:17:35,470:INFO:Importing libraries
+2026-04-08 20:17:35,470:INFO:Copying training dataset
+2026-04-08 20:17:35,510:INFO:Defining folds
+2026-04-08 20:17:35,510:INFO:Declaring metric variables
+2026-04-08 20:17:35,510:INFO:Importing untrained model
+2026-04-08 20:17:35,510:INFO:Declaring custom model
+2026-04-08 20:17:35,511:INFO:SVM - Linear Kernel Imported successfully
+2026-04-08 20:17:35,513:INFO:Cross validation set to False
+2026-04-08 20:17:35,513:INFO:Fitting Model
+2026-04-08 20:17:35,551:INFO:SGDClassifier(alpha=0.0001, average=False, class_weight=None,
+              early_stopping=False, epsilon=0.1, eta0=0.001, fit_intercept=True,
+              l1_ratio=0.15, learning_rate='optimal', loss='hinge',
+              max_iter=1000, n_iter_no_change=5, n_jobs=-1, penalty='l2',
+              power_t=0.5, random_state=42, shuffle=True, tol=0.001,
+              validation_fraction=0.1, verbose=0, warm_start=False)
+2026-04-08 20:17:35,551:INFO:create_model() successfully completed......................................
+2026-04-08 20:17:35,723:INFO:_master_model_container: 3
+2026-04-08 20:17:35,723:INFO:_display_container: 2
+2026-04-08 20:17:35,726:INFO:SGDClassifier(alpha=0.0001, average=False, class_weight=None,
+              early_stopping=False, epsilon=0.1, eta0=0.001, fit_intercept=True,
+              l1_ratio=0.15, learning_rate='optimal', loss='hinge',
+              max_iter=1000, n_iter_no_change=5, n_jobs=-1, penalty='l2',
+              power_t=0.5, random_state=42, shuffle=True, tol=0.001,
+              validation_fraction=0.1, verbose=0, warm_start=False)
+2026-04-08 20:17:35,726:INFO:compare_models() successfully completed......................................
