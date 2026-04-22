@@ -1,4 +1,12 @@
+import os
+import sys
+
 import streamlit as st
+
+# So `streamlit run src/program/index.py` from repo root can resolve `tool`
+_PROGRAM_DIR = os.path.dirname(os.path.abspath(__file__))
+if _PROGRAM_DIR not in sys.path:
+    sys.path.insert(0, _PROGRAM_DIR)
 
 from tool import predict_spam, train_model
 
