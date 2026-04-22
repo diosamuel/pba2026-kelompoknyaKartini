@@ -1,0 +1,4 @@
+Both are website and model created with help of AI Agent
+
+1. Website: Claude Opus 4.6 (Via Cursor)
+2. Model: GPT-4
