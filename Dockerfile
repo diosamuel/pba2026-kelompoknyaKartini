@@ -20,7 +20,11 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt ./
+COPY text_preprocess.py ./
 COPY src/ ./src/
+COPY deep_learning/ ./deep_learning/
+COPY machine_learning/ ./machine_learning/
+COPY dataset/ ./dataset/
 
 RUN pip3 install -r requirements.txt
 
