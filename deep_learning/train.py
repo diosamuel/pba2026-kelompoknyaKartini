@@ -1,6 +1,8 @@
 """
 Train the LSTM spam detector using :mod:`deep_learning.dataloader` and
 :func:`deep_learning.model.build_lstm_spam_model`, with Weights & Biases logging.
+
+Framework: PyTorch
 """
 from __future__ import annotations
 
@@ -9,14 +11,14 @@ import sys
 from contextlib import suppress
 
 import numpy as np
-import tensorflow as tf
+import torch
+import torch.nn as nn
+from torch.utils.data import DataLoader, TensorDataset
 import wandb
 from gensim.models import Word2Vec
 from sklearn.metrics import accuracy_score, classification_report, f1_score
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
-from tensorflow.keras import callbacks as keras_callbacks
-from tensorflow.keras.optimizers import Adam
 
 _ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 if _ROOT not in sys.path:
@@ -55,7 +57,7 @@ def _default_train_config() -> dict:
         "project": "email-spam-detection-lstm",
         "learning_rate": 0.001,
         "batch_size": 32,
-        "epochs": 10,
+        "epochs": 30,
         "test_size": 0.2,
         "random_state": 42,
         "dataset": "email_spam_indo",
@@ -69,20 +71,6 @@ def _default_train_config() -> dict:
     }
 
 
-def build_wandb_keras_callback() -> keras_callbacks.Callback | None:
-    try:
-        from wandb.integration.keras import WandbCallback
-
-        return WandbCallback(monitor="val_loss", log_weights=False)
-    except ImportError:
-        try:
-            from wandb.keras import WandbCallback  # type: ignore[import-not-found]
-
-            return WandbCallback(monitor="val_loss", log_weights=False)
-        except ImportError:
-            return None
-
-
 def main() -> None:
     cfg_dict = _default_train_config()
     entity = cfg_dict.pop("entity", None)
@@ -94,6 +82,9 @@ def main() -> None:
         config=cfg_dict,
     )
     c = run.config
+
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    print(f"Menggunakan device: {device}")
 
     try:
         print("Memuat dataset dan preprocessing...")
@@ -139,44 +130,79 @@ def main() -> None:
 
         print(f"X_train shape: {X_train.shape}, y_train shape: {y_train.shape}")
 
-        print("Membangun model LSTM (dari deep_learning.model)...")
+        # Convert to PyTorch tensors
+        X_train_t = torch.FloatTensor(X_train).to(device)
+        y_train_t = torch.FloatTensor(y_train).unsqueeze(1).to(device)
+        X_test_t = torch.FloatTensor(X_test).to(device)
+        y_test_t = torch.FloatTensor(y_test).unsqueeze(1).to(device)
+
+        train_dataset = TensorDataset(X_train_t, y_train_t)
+        train_loader = DataLoader(train_dataset, batch_size=c.batch_size, shuffle=True)
+
+        print("Membangun model LSTM (PyTorch)...")
         model = build_lstm_spam_model(
-            max_len=c.max_len,
             embedding_dim=c.embedding_dim,
             lstm1_units=c.lstm1_units,
             lstm2_units=c.lstm2_units,
             dropout_rate=c.dropout_rate,
             dense_hidden_units=c.dense_hidden_units,
-        )
-        model.compile(
-            loss="binary_crossentropy",
-            optimizer=Adam(learning_rate=c.learning_rate),
-            metrics=["accuracy"],
-        )
-        model.summary()
+        ).to(device)
 
-        cb_list: list[keras_callbacks.Callback] = []
-        wcb = build_wandb_keras_callback()
-        if wcb is not None:
-            cb_list.append(wcb)
-        else:
-            print("wandb: WandbCallback not found; only manual metric logging at end.")
+        print(model)
+
+        criterion = nn.BCELoss()
+        optimizer = torch.optim.Adam(model.parameters(), lr=c.learning_rate)
 
         print("Melatih model LSTM...")
-        history = model.fit(
-            X_train,
-            y_train,
-            epochs=c.epochs,
-            batch_size=c.batch_size,
-            validation_data=(X_test, y_test),
-            callbacks=cb_list,
-        )
+        for epoch in range(c.epochs):
+            model.train()
+            train_loss = 0.0
+            train_correct = 0
+            train_total = 0
 
-        if history.history.get("val_accuracy"):
-            run.summary["val_accuracy_last"] = float(history.history["val_accuracy"][-1])
+            for batch_X, batch_y in train_loader:
+                optimizer.zero_grad()
+                outputs = model(batch_X)
+                loss = criterion(outputs, batch_y)
+                loss.backward()
+                optimizer.step()
+
+                train_loss += loss.item() * batch_X.size(0)
+                predicted = (outputs > 0.5).float()
+                train_correct += (predicted == batch_y).sum().item()
+                train_total += batch_y.size(0)
+
+            train_loss /= train_total
+            train_acc = train_correct / train_total
+
+            # Validation
+            model.eval()
+            with torch.no_grad():
+                val_outputs = model(X_test_t)
+                val_loss = criterion(val_outputs, y_test_t).item()
+                val_predicted = (val_outputs > 0.5).float()
+                val_acc = (val_predicted == y_test_t).sum().item() / len(y_test_t)
+
+            print(
+                f"Epoch {epoch + 1}/{c.epochs} - "
+                f"loss: {train_loss:.4f} - accuracy: {train_acc:.4f} - "
+                f"val_loss: {val_loss:.4f} - val_accuracy: {val_acc:.4f}"
+            )
+
+            wandb.log({
+                "epoch": epoch + 1,
+                "train/loss": train_loss,
+                "train/accuracy": train_acc,
+                "val/loss": val_loss,
+                "val/accuracy": val_acc,
+            })
+
+        run.summary["val_accuracy_last"] = val_acc
 
         print("Mengevaluasi model pada test data...")
-        y_pred_probs = model.predict(X_test, batch_size=c.batch_size)
+        model.eval()
+        with torch.no_grad():
+            y_pred_probs = model(X_test_t).cpu().numpy()
         y_pred = (y_pred_probs > 0.5).astype(int).flatten()
 
         test_acc = float(accuracy_score(y_test, y_pred))
@@ -200,13 +226,13 @@ def main() -> None:
             rep.add_file(report_path, name="classification_report.txt")
             run.log_artifact(rep)
 
-        model_path = os.path.join(_DL_DIR, "model", "spam_model_lstm.keras")
+        model_path = os.path.join(_DL_DIR, "model", "spam_model_lstm.pth")
         os.makedirs(os.path.dirname(model_path), exist_ok=True)
-        model.save(model_path)
+        torch.save(model.state_dict(), model_path)
         print(f"Model LSTM berhasil disimpan ke {model_path}!")
         with suppress(Exception):
-            m_art = wandb.Artifact("lstm-keras", type="model")
-            m_art.add_file(model_path, name="spam_model_lstm.keras")
+            m_art = wandb.Artifact("lstm-pytorch", type="model")
+            m_art.add_file(model_path, name="spam_model_lstm.pth")
             run.log_artifact(m_art)
 
         run.summary["label_0"] = str(le.classes_[0])
@@ -218,5 +244,6 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    tf.keras.utils.set_random_seed(42)
+    torch.manual_seed(42)
+    np.random.seed(42)
     main()

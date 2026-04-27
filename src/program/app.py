@@ -4,7 +4,7 @@ import sys
 import numpy as np
 import pandas as pd
 import streamlit as st
-import tensorflow as tf
+import torch
 from gensim.models import Word2Vec
 from pycaret.classification import load_model, predict_model
 
@@ -18,12 +18,13 @@ from text_preprocess import preprocess_stages  # noqa: E402
 from deep_learning.model import (  # noqa: E402
     DEFAULT_EMBEDDING_DIM,
     DEFAULT_MAX_LEN,
+    LSTMSpamModel,
 )
 
 # Artifacts: PyCaret + w2v in machine_learning/; LSTM in deep_learning/ (see deep_learning.train)
 _ML_DIR = os.path.join(_ROOT, "machine_learning", "model")
 _W2V_PATH = os.path.join(_ROOT, "machine_learning", "w2v_kamus.model")
-_LSTM_PATH = os.path.join(_ROOT, "deep_learning", "model", "spam_model_lstm.keras")
+_LSTM_PATH = os.path.join(_ROOT, "deep_learning", "model", "spam_model_lstm.pth")
 
 
 # ===== LOAD MODELS (cached) =====
@@ -34,7 +35,12 @@ def load_all_models():
         "Naive Bayes": load_model(os.path.join(_ML_DIR, "spam_model_nb")),
         "Logistic Regression": load_model(os.path.join(_ML_DIR, "spam_model_lr")),
     }
-    lstm_model = tf.keras.models.load_model(_LSTM_PATH)
+    # Load PyTorch LSTM model
+    device = torch.device("cpu")
+    lstm_model = LSTMSpamModel()
+    lstm_model.load_state_dict(torch.load(_LSTM_PATH, map_location=device, weights_only=True))
+    lstm_model.eval()
+
     w2v = Word2Vec.load(_W2V_PATH)
     return ml_models, lstm_model, w2v
 
@@ -73,8 +79,9 @@ def prediksi_email(teks, nama_model):
     kata_kata = teks_stopword.split()
 
     if nama_model == "LSTM":
-        seq = np.expand_dims(sequence_vector(kata_kata), axis=0)
-        prob = float(lstm_model.predict(seq, verbose=0)[0][0])
+        seq = torch.FloatTensor(sequence_vector(kata_kata)).unsqueeze(0)
+        with torch.no_grad():
+            prob = float(lstm_model(seq).item())
         label = "spam" if prob > 0.5 else "ham"
         return label, prob, teks_bersih, teks_normal, teks_stopword
 
