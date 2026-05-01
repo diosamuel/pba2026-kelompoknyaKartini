@@ -15,5 +15,6 @@ dependencies = [
     "scipy>=1.7,<=1.11.4",
     "streamlit>=1.38,<2",
     "tensorflow>=2.15,<2.21",
+    "torch>=2.11.0",
     "wandb>=0.16,<1.0",
 ]
