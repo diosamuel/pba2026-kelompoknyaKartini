@@ -5,6 +5,7 @@ import re
 import sys
 from collections import Counter
 
+import pandas as pd
 import torch
 from sklearn.model_selection import train_test_split
 
@@ -12,7 +13,6 @@ _ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 if _ROOT not in sys.path:
     sys.path.insert(0, _ROOT)
 
-from deep_learning.dataloader import load_spam_email_dataframe
 from deep_learning.dataloader import build_dataloaders
 from deep_learning.train_lstm import build_training_objects, train_epochs
 
@@ -36,10 +36,24 @@ def build_vocab(texts, min_freq: int = 2) -> dict[str, int]:
 
 def main() -> None:
     print("Loading dataset...")
-    df = load_spam_email_dataframe()
+    dataset_path = os.path.join(_ROOT, "dataset", "email_spam_indo.csv")
+    df = pd.read_csv(dataset_path, encoding="utf-8", on_bad_lines="skip")
 
-    X = df["clean"]
-    y = df["label"].str.lower()
+    required_columns = {"Pesan", "Kategori"}
+    if not required_columns.issubset(df.columns):
+        raise ValueError("Dataset must include 'Pesan' and 'Kategori' columns.")
+
+    data = (
+        df[["Pesan", "Kategori"]]
+        .dropna()
+        .rename(columns={"Pesan": "text", "Kategori": "label"})
+    )
+    data["text"] = data["text"].astype(str).str.strip()
+    data["label"] = data["label"].astype(str).str.strip().str.lower()
+    data = data[(data["text"] != "") & (data["label"].isin(["spam", "ham"]))]
+
+    X = data["text"]
+    y = data["label"]
 
     print("Splitting train/test...")
     X_train, X_test, y_train, y_test = train_test_split(
