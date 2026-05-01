@@ -1,24 +1,39 @@
-"""
-Backward-compatible entry: same training as :mod:`deep_learning.train`.
-
-Prefer ``python train.py`` inside ``deep_learning/`` or
-``python -m deep_learning.train`` from the project root.
-"""
 from __future__ import annotations
 
-import os
-import sys
-
-import numpy as np
 import torch
+import torch.nn as nn
+import torch.optim as optim
 
-_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-if _ROOT not in sys.path:
-    sys.path.insert(0, _ROOT)
+from deeplearning.model import SpamClassifier
 
-from deep_learning.train import main  # noqa: E402
 
-if __name__ == "__main__":
-    torch.manual_seed(42)
-    np.random.seed(42)
-    main()
+# set up the base model
+def build_training_objects(vocab):
+    vocab_size = len(vocab)
+    model = SpamClassifier(vocab_size)
+    criterion = nn.BCELoss()
+    optimizer = optim.Adam(model.parameters(), lr=0.001)
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    model.to(device)
+    return model, criterion, optimizer, device
+
+
+# train epoch
+def train_epochs(model, criterion, optimizer, device, train_dl, epochs=30):
+    train_losses = []
+    for epoch in range(epochs):
+        model.train()
+        train_loss = 0
+        for X, y in train_dl:
+            X, y = X.to(device), y.to(device)
+            optimizer.zero_grad()
+            preds = model(X)
+            loss = criterion(preds, y)
+            loss.backward()
+            optimizer.step()
+            train_loss += loss.item()
+
+        avg = train_loss / len(train_dl)
+        train_losses.append(avg)
+        print(f"Epoch {epoch + 1} | Loss: {avg:.4f}")
+    return train_losses
