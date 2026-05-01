@@ -13,8 +13,8 @@ if _ROOT not in sys.path:
     sys.path.insert(0, _ROOT)
 
 from deep_learning.dataloader import load_spam_email_dataframe
-from new_deeplearning.dataloader import build_dataloaders
-from new_deeplearning.train_lstm import build_training_objects, train_epochs
+from deep_learning.dataloader import build_dataloaders
+from deep_learning.train_lstm import build_training_objects, train_epochs
 
 
 def tokenize(text: str) -> list[str]:
@@ -77,7 +77,7 @@ def main() -> None:
         epochs=30,
     )
 
-    model_dir = os.path.join(_ROOT, "new_deeplearning", "model")
+    model_dir = os.path.join(_ROOT, "deep_learning", "model")
     os.makedirs(model_dir, exist_ok=True)
     model_path = os.path.join(model_dir, "spam_classifier_lstm.pth")
     torch.save(

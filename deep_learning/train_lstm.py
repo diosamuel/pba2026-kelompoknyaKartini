@@ -4,7 +4,7 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 
-from deeplearning.model import SpamClassifier
+from deep_learning.model import SpamClassifier
 
 
 # set up the base model
