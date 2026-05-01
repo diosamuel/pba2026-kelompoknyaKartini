@@ -161,5 +161,6 @@ class SpamHamDatasetCleaner:
         return out
 
 
-cleaner = SpamHamDatasetCleaner(inputPath="/content/email_spam_indo.csv")
-dfClean = cleaner.run()
+if __name__ == "__main__":
+    cleaner = SpamHamDatasetCleaner(inputPath="/content/email_spam_indo.csv")
+    dfClean = cleaner.run()
