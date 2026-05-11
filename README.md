@@ -7,94 +7,111 @@ sdk: docker
 app_port: 8501
 tags:
 - streamlit
+- nlp
+- pytorch
+- scikit-learn
 pinned: false
-short_description: spam-indonesia-email-detect
+short_description: Deteksi spam email bahasa Indonesia
 license: mit
 ---
 
 <div align="center">
 
-# Deteksi Spam Email Indonesia
+# 📧 Deteksi Spam Email Indonesia
 
 ### Pemrosesan Bahasa Alami — Kelompok Kartini
 
-Klasifikasi email **Spam** atau **Ham** (bukan spam) berbahasa Indonesia menggunakan NLP dan Machine Learning.
+Klasifikasi email **Spam** atau **Ham** (bukan spam) berbahasa Indonesia menggunakan NLP dan Deep Learning.
 
 [![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io)
+[![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org)
 [![HuggingFace Space](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Space-blue)](https://huggingface.co/spaces/diosamuel/spam-indonesia-email-detect)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 </div>
 
 ---
-## Deskripsi Proyek
 
-Proyek ini merupakan sistem klasifikasi email spam berbahasa Indonesia berbasis machine learning dan deep learning. Sistem dikembangkan untuk mendeteksi apakah sebuah email termasuk kategori spam atau non-spam (ham) melalui tahapan preprocessing teks, representasi fitur menggunakan Word2Vec, serta proses klasifikasi menggunakan beberapa algoritma seperti Support Vector Machine (SVM), Naive Bayes, Logistic Regression, dan Long Short-Term Memory (LSTM). Aplikasi ini dilengkapi dengan antarmuka interaktif menggunakan Streamlit sehingga pengguna dapat melakukan prediksi teks secara langsung. Selain itu, proyek telah disiapkan untuk deployment menggunakan Docker dan HuggingFace Spaces.
+## 📖 Deskripsi Proyek
 
-## Dataset
-Dataset yang digunakan bersumber dari kaggle yang berisi kumpulan email berbahasa Indonesia yang digunakan untuk tugas klasifikasi spam dan non-spam (ham). Dataset merupakan hasil adaptasi dan penerjemahan dari dataset spam email publik ke dalam Bahasa Indonesia
-🔗 Dataset Kaggle: 
-https://www.kaggle.com/datasets/gevabriel/indonesian-email-spam
+Proyek ini merupakan sistem klasifikasi email spam berbahasa Indonesia berbasis *Machine Learning* dan *Deep Learning*. Sistem dikembangkan untuk mendeteksi apakah sebuah email termasuk kategori spam atau non-spam (ham) melalui serangkaian tahapan komprehensif:
+
+- **Preprocessing Teks:** Pembersihan karakter, normalisasi teks, dan penghapusan *stopwords*.
+- **Feature Extraction:** Ekstraksi fitur menggunakan algoritma pemrosesan teks tingkat lanjut.
+- **Klasifikasi:** Menggunakan algoritma *Support Vector Machine (SVM)*, *Naive Bayes*, *Logistic Regression*, dan jaringan *Long Short-Term Memory (LSTM)*.
+- **Deployment:** Dilengkapi dengan antarmuka web interaktif menggunakan Streamlit dan siap di-*deploy* menggunakan Docker.
+
+## 📊 Dataset
+
+Dataset yang digunakan bersumber dari Kaggle yang berisi kumpulan email berbahasa Indonesia. Dataset ini merupakan hasil adaptasi dan penerjemahan dari dataset spam email publik ke dalam Bahasa Indonesia.
+
+🔗 **Tautan Dataset:** [Indonesian Email Spam (Kaggle)](https://www.kaggle.com/datasets/gevabriel/indonesian-email-spam)
 
 ## ⚙️ Pipeline Pemrosesan
 
-```text
-Raw Data
-   ↓
-Preprocessing
-(case folding, cleaning, tokenizing, stopword removal, stemming)
-   ↓
-Feature Extraction
-(Word2Vec)
-   ↓
-Training Model
-   - Support Vector Machine (SVM)
-   - Logistic Regression
-   - Naive Bayes
-   - LSTM
-   ↓
-Prediksi Klasifikasi
-(Spam / Non-Spam)
-   ↓
-Evaluasi & Perbandingan Model
+```mermaid
+graph TD
+    A[Raw Data Email] --> B[Preprocessing Teks]
+    B -->|Cleaning, Normalisasi, Stopwords| C[Feature Extraction & Tokenisasi]
+    C --> D[Model Training]
+    
+    D --> E(Support Vector Machine)
+    D --> F(Logistic Regression)
+    D --> G(Naive Bayes)
+    D --> H(LSTM - Deep Learning)
+    
+    E --> I[Prediksi Klasifikasi]
+    F --> I
+    G --> I
+    H --> I
+    
+    I -->|Evaluasi Model| J((Spam / Ham))
 ```
 
-## Fitur
+## ✨ Fitur Utama
 
-- Antarmuka web interaktif via Streamlit
-- Deploy-ready dengan Docker & HuggingFace Spaces
+- Antarmuka web interaktif dan *user-friendly* via Streamlit.
+- Analisis perbandingan kinerja berbagai model ML dan DL.
+- *Deploy-ready* dengan Docker & HuggingFace Spaces.
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 | Komponen | Teknologi |
 |---|---|
-| Framework | Streamlit |
-| NLP | Sastrawi, Gensim (Word2Vec) |
-| ML | PyCaret, scikit-learn |
-| Deploy | Docker, HuggingFace Spaces |
+| **Framework UI** | Streamlit |
+| **Deep Learning**| PyTorch |
+| **NLP & ML**     | Sastrawi, PyCaret, scikit-learn |
+| **Deployment**   | Docker, HuggingFace Spaces |
 
-## Cara Menjalankan
+## 🚀 Cara Menjalankan
+
+### Cara 1: Menggunakan Python Lokal (Disarankan)
 
 ```bash
-# Clone repository
+# 1. Clone repository
 git clone https://github.com/diosamuel/pba2026-kelompoknyaKartini.git
 cd pba2026-kelompoknyaKartini
 
-# Install dependencies
+# 2. Buat Virtual Environment & Install dependencies
+python -m venv venv
+.\venv\Scripts\activate  # Untuk pengguna Windows
 pip install -r requirements.txt
 
-# Jalankan aplikasi
+# 3. Jalankan aplikasi web
 streamlit run src/program/app.py
 ```
 
-Atau dengan Docker:
+### Cara 2: Menggunakan Docker
 
 ```bash
+# Build image
 docker build -t spam-email-detect .
+
+# Jalankan container
 docker run -p 8501:8501 spam-email-detect
 ```
 
-## Anggota Kelompok
+## 👥 Anggota Kelompok
 
 | Nama | NIM | GitHub |
 |---|---|---|
@@ -102,14 +119,14 @@ docker run -p 8501:8501 spam-email-detect
 | Baruna Abirawa | 122450097 | [@barunaxyz](https://github.com/barunaxyz) |
 | Kartini Lovian Simbolon | 122450003 | [@kartinils](https://github.com/kartinils) |
 
-## Links
+## 🔗 Tautan Penting
 
-| | URL |
+| Deskripsi | URL |
 |---|---|
-| GitHub | [pba2026-kelompoknyaKartini](https://github.com/diosamuel/pba2026-kelompoknyaKartini) |
-| HuggingFace Model | [spam-indonesia-email-detect](https://huggingface.co/diosamuel/spam-indonesia-email-detect) |
-| HuggingFace Space | [Live Demo](https://huggingface.co/spaces/diosamuel/spam-indonesia-email-detect) |
-| Arxiv | [Link Paper](https://arxiv.org/abs/2605.03440) |
+| **GitHub Repo** | [pba2026-kelompoknyaKartini](https://github.com/diosamuel/pba2026-kelompoknyaKartini) |
+| **HuggingFace Model** | [spam-indonesia-email-detect](https://huggingface.co/diosamuel/spam-indonesia-email-detect) |
+| **Live Demo (Web)** | [HuggingFace Space](https://huggingface.co/spaces/diosamuel/spam-indonesia-email-detect) |
+| **Paper / Jurnal** | [Arxiv Link](https://arxiv.org/abs/2605.03440) |
 
 ---
 
