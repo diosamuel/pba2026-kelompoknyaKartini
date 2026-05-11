@@ -29,47 +29,38 @@ Klasifikasi email **Spam** atau **Ham** (bukan spam) berbahasa Indonesia menggun
 ---
 ## Deskripsi Proyek
 
-Proyek ini merupakan sistem klasifikasi email spam berbahasa Indonesia berbasis machine learning dan deep learning. Sistem dikembangkan untuk mendeteksi apakah sebuah email termasuk kategori spam atau non-spam (ham) melalui tahapan preprocessing teks, representasi fitur menggunakan Word2Vec, serta proses klasifikasi menggunakan beberapa algoritma seperti Support Vector Machine (SVM), Naive Bayes, Logistic Regression, dan Long Short-Term Memory (LSTM).
-
-Aplikasi ini dilengkapi dengan antarmuka interaktif menggunakan Streamlit sehingga pengguna dapat melakukan prediksi teks secara langsung. Selain itu, proyek telah disiapkan untuk deployment menggunakan Docker dan HuggingFace Spaces.
+Proyek ini merupakan sistem klasifikasi email spam berbahasa Indonesia berbasis machine learning dan deep learning. Sistem dikembangkan untuk mendeteksi apakah sebuah email termasuk kategori spam atau non-spam (ham) melalui tahapan preprocessing teks, representasi fitur menggunakan Word2Vec, serta proses klasifikasi menggunakan beberapa algoritma seperti Support Vector Machine (SVM), Naive Bayes, Logistic Regression, dan Long Short-Term Memory (LSTM). Aplikasi ini dilengkapi dengan antarmuka interaktif menggunakan Streamlit sehingga pengguna dapat melakukan prediksi teks secara langsung. Selain itu, proyek telah disiapkan untuk deployment menggunakan Docker dan HuggingFace Spaces.
 
 ## Dataset
 Dataset yang digunakan bersumber dari kaggle yang berisi kumpulan email berbahasa Indonesia yang digunakan untuk tugas klasifikasi spam dan non-spam (ham). Dataset merupakan hasil adaptasi dan penerjemahan dari dataset spam email publik ke dalam Bahasa Indonesia
 🔗 Dataset Kaggle: 
 https://www.kaggle.com/datasets/gevabriel/indonesian-email-spam
 
-## Pipeline Sistem
+## ⚙️ Pipeline Pemrosesan
 
-1. **Text Preprocessing**
-   - Cleaning text
-   - Case folding
-   - Normalisasi kata slang
-   - Tokenizing
-   - Stopword removal
-
-2. **Feature Extraction**
-   - Representasi teks menggunakan Word2Vec
-
-3. **Model Training & Classification**
+```text
+Raw Data
+   ↓
+Preprocessing
+(case folding, cleaning, tokenizing, stopword removal, stemming)
+   ↓
+Feature Extraction
+(Word2Vec)
+   ↓
+Training Model
    - Support Vector Machine (SVM)
-   - Naive Bayes
    - Logistic Regression
-
-4. **Prediction System**
-   - Input teks pengguna
-   - Proses klasifikasi otomatis
-   - Output kategori spam atau non-spam
-
-5. **Deployment**
-   - Antarmuka interaktif menggunakan Streamlit
-   - Containerization dengan Docker
-   - Deployment melalui HuggingFace Spaces
+   - Naive Bayes
+   - LSTM
+   ↓
+Prediksi Klasifikasi
+(Spam / Non-Spam)
+   ↓
+Evaluasi & Perbandingan Model
+```
 
 ## Fitur
 
-- Preprocessing teks lengkap (cleaning, normalisasi slang, stopword removal)
-- Representasi teks menggunakan **Word2Vec**
-- Tiga model klasifikasi: **SVM**, **Naive Bayes**, **Logistic Regression**
 - Antarmuka web interaktif via Streamlit
 - Deploy-ready dengan Docker & HuggingFace Spaces
 
