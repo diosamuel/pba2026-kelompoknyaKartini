@@ -81,7 +81,7 @@ docker run -p 8501:8501 spam-email-detect
 | GitHub | [pba2026-kelompoknyaKartini](https://github.com/diosamuel/pba2026-kelompoknyaKartini) |
 | HuggingFace Model | [spam-indonesia-email-detect](https://huggingface.co/diosamuel/spam-indonesia-email-detect) |
 | HuggingFace Space | [Live Demo](https://huggingface.co/spaces/diosamuel/spam-indonesia-email-detect) |
-| Arxiv | [Live Paper](https://arxiv.org/abs/2605.03440) |
+| Arxiv | [Link Paper](https://arxiv.org/abs/2605.03440) |
 
 ---
 
