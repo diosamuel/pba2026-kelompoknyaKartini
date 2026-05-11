@@ -28,6 +28,11 @@ Klasifikasi email **Spam** atau **Ham** (bukan spam) berbahasa Indonesia menggun
 
 ---
 
+## Dataset
+Dataset yang digunakan bersumber dari kaggle yang berisi kumpulan email berbahasa Indonesia yang digunakan untuk tugas klasifikasi spam dan non-spam (ham). Dataset merupakan hasil adaptasi dan penerjemahan dari dataset spam email publik ke dalam Bahasa Indonesia
+🔗 Dataset Kaggle: 
+https://www.kaggle.com/datasets/gevabriel/indonesian-email-spam
+
 ## Fitur
 
 - Preprocessing teks lengkap (cleaning, normalisasi slang, stopword removal)
