@@ -29,11 +29,9 @@ Screenshot/Media
 
 ![prompt1.jpeg](./prompt1.jpeg)
 
-**
-Model: Gemini 3.1 Pro
+**Model: Gemini 3.1 Pro**
 
-Agent: Antigravity IDE
-**
+**Agent: Antigravity IDE**
 ### Observation and discussion of dataset
 
 Prompt:
@@ -45,7 +43,7 @@ Screenshot/Media
 
 ![prompt2.jpeg](./prompt2.jpeg)
 
-**Model: ChatGPT **
+**Model: ChatGPT**
 
 ###  Debugging LSTM model with help of Claude Opus Agent
 
@@ -56,8 +54,6 @@ Screenshot/Media
 
 [cursor chat](./cursor-chat-f2a106fd.md)
 
-**
-Mode: Claude Opus 4.7
+**Mode: Claude Opus 4.7**
 
-Agent: Cursor
-**
+**Agent: Cursor**
