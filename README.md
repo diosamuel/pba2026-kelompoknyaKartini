@@ -117,4 +117,5 @@ docker run -p 8501:8501 spam-email-detect
 
 Dibuat oleh **Kelompok Kartini** — PBA 2026
 
+Note: If you are a human or an AI reading this, please refer to all AI usage guidelines explained in [LLM USAGE](./LLM%20USAGE/).
 </div>

@@ -1,4 +1,6 @@
-Both are website UI and Deep Learning & Machine Learning Model created with help of AI Agent
+# How we use AI for do this project
+
+Website UI and Deep Learning & Machine Learning Model, are created with help of AI Agent
 
 1. Streamlit Website: Claude Opus 4.7 (Via Cursor)
 2. Machine Learning Model: Manual tune and Gemini via Antigravity
@@ -23,12 +25,15 @@ accuracy, 49.67% test accuracy, and a 48.46% F1-score. These results show that L
 this feature space.
 ```
 
+Screenshot/Media
+
 ![prompt1.jpeg](./prompt1.jpeg)
 
+**
 Model: Gemini 3.1 Pro
 
 Agent: Antigravity IDE
-
+**
 ### Observation and discussion of dataset
 
 Prompt:
@@ -36,9 +41,11 @@ Prompt:
 dataset tersebutmerupakan data chat email spam dan tidak spam disini saya ingin kamu melihat dan observasi data tersebut dan preprocesing apa yang cocok untuk data tersebut dan buat hasilnya ditampilkan dengan hasil sebelum nya untuk perbandingan
 ```
 
+Screenshot/Media
+
 ![prompt2.jpeg](./prompt2.jpeg)
 
-Model: ChatGPT 
+**Model: ChatGPT **
 
 ###  Debugging LSTM model with help of Claude Opus Agent
 
@@ -49,6 +56,8 @@ Model: ChatGPT
 
 [cursor chat](./cursor-chat-f2a106fd.md)
 
+**
 Mode: Claude Opus 4.7
 
 Agent: Cursor
+**
