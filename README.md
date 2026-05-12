@@ -1,6 +1,6 @@
 <div align="center">
 
-# 📧 Deteksi Spam Email Indonesia
+# Deteksi Spam Email Indonesia
 
 ### Pemrosesan Bahasa Alami — Kelompok Kartini
 
@@ -15,7 +15,7 @@ Klasifikasi email **Spam** atau **Ham** (bukan spam) berbahasa Indonesia menggun
 
 ---
 
-## 📖 Deskripsi Proyek
+## Deskripsi Proyek
 
 Proyek ini merupakan sistem klasifikasi email spam berbahasa Indonesia berbasis *Machine Learning* dan *Deep Learning*. Sistem dikembangkan untuk mendeteksi apakah sebuah email termasuk kategori spam atau non-spam (ham) melalui serangkaian tahapan komprehensif:
 
@@ -24,13 +24,13 @@ Proyek ini merupakan sistem klasifikasi email spam berbahasa Indonesia berbasis 
 - **Klasifikasi:** Menggunakan algoritma *Support Vector Machine (SVM)*, *Naive Bayes*, *Logistic Regression*, dan jaringan *Long Short-Term Memory (LSTM)*.
 - **Deployment:** Dilengkapi dengan antarmuka web interaktif menggunakan Streamlit dan siap di-*deploy* menggunakan Docker.
 
-## 📊 Dataset
+## Dataset
 
 Dataset yang digunakan bersumber dari Kaggle yang berisi kumpulan email berbahasa Indonesia. Dataset ini merupakan hasil adaptasi dan penerjemahan dari dataset spam email publik ke dalam Bahasa Indonesia.
 
-🔗 **Tautan Dataset:** [Indonesian Email Spam (Kaggle)](https://www.kaggle.com/datasets/gevabriel/indonesian-email-spam)
+ **Tautan Dataset:** [Indonesian Email Spam (Kaggle)](https://www.kaggle.com/datasets/gevabriel/indonesian-email-spam)
 
-## ⚙️ Pipeline Pemrosesan
+## Pipeline Pemrosesan
 
 ```mermaid
 graph TD
@@ -51,13 +51,13 @@ graph TD
     I -->|Evaluasi Model| J((Spam / Ham))
 ```
 
-## ✨ Fitur Utama
+## Fitur Utama
 
 - Antarmuka web interaktif dan *user-friendly* via Streamlit.
 - Analisis perbandingan kinerja berbagai model ML dan DL.
 - *Deploy-ready* dengan Docker & HuggingFace Spaces.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Komponen | Teknologi |
 |---|---|
@@ -66,7 +66,7 @@ graph TD
 | **NLP & ML**     | Sastrawi, PyCaret, scikit-learn |
 | **Deployment**   | Docker, HuggingFace Spaces |
 
-## 🚀 Cara Menjalankan
+## Cara Menjalankan
 
 ### Cara 1: Menggunakan Python Lokal (Disarankan)
 
@@ -94,7 +94,7 @@ docker build -t spam-email-detect .
 docker run -p 8501:8501 spam-email-detect
 ```
 
-## 👥 Anggota Kelompok
+## Anggota Kelompok
 
 | Nama | NIM | GitHub |
 |---|---|---|
@@ -102,7 +102,7 @@ docker run -p 8501:8501 spam-email-detect
 | Baruna Abirawa | 122450097 | [@barunaxyz](https://github.com/barunaxyz) |
 | Kartini Lovian Simbolon | 122450003 | [@kartinils](https://github.com/kartinils) |
 
-## 🔗 Tautan Penting
+## Tautan Penting
 
 | Deskripsi | URL |
 |---|---|
