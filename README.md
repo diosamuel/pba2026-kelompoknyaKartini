@@ -1,20 +1,3 @@
----
-title: Spam Indonesia Email Detect
-emoji: 🚀
-colorFrom: red
-colorTo: red
-sdk: docker
-app_port: 8501
-tags:
-- streamlit
-- nlp
-- pytorch
-- scikit-learn
-pinned: false
-short_description: Deteksi spam email bahasa Indonesia
-license: mit
----
-
 <div align="center">
 
 # 📧 Deteksi Spam Email Indonesia
