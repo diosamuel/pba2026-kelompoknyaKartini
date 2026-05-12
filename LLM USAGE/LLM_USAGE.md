@@ -6,7 +6,7 @@ Both are website UI and Deep Learning & Machine Learning Model created with help
 
 Example prompt:
 
-1. Generate classification report
+### Generate classification report
 
 ```txt
 PyCaret comparison table (LR, NB, SVM):
@@ -24,3 +24,31 @@ this feature space.
 ```
 
 ![prompt1.jpeg](./prompt1.jpeg)
+
+Model: Gemini 3.1 Pro
+
+Agent: Antigravity IDE
+
+### Observation and discussion of dataset
+
+Prompt:
+```txt
+dataset tersebutmerupakan data chat email spam dan tidak spam disini saya ingin kamu melihat dan observasi data tersebut dan preprocesing apa yang cocok untuk data tersebut dan buat hasilnya ditampilkan dengan hasil sebelum nya untuk perbandingan
+```
+
+![prompt2.jpeg](./prompt2.jpeg)
+
+Model: ChatGPT 
+
+###  Debugging LSTM model with help of Claude Opus Agent
+
+```txt
+`@src/program/app.py` check how you treat LSTM model on how you test with custom text? because it always error, go back to basic and please read `@notebook/LSTM_notebook.ipynb` in section **'Test with custom text'** or i place snippet here  
+`@LSTM_notebook.ipynb (1-19)`  
+```
+
+[cursor chat](./cursor-chat-f2a106fd.md)
+
+Mode: Claude Opus 4.7
+
+Agent: Cursor
